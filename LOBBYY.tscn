@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv4crvaw8odwp"]
+
+[ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_heriu"]
+[ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="2_3wc8o"]
+[ext_resource type="Script" path="res://hostbackbutton.gd" id="3_1n8uk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_heriu")
+expand_mode = 1
+
+[node name="BACK BUTTON" type="TextureButton" parent="Control/TextureRect"]
+offset_left = -67.0
+offset_top = 6.0
+offset_right = 333.0
+offset_bottom = 102.0
+texture_normal = ExtResource("2_3wc8o")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1n8uk")
+
+[connection signal="pressed" from="Control/TextureRect/BACK BUTTON" to="Control/TextureRect/BACK BUTTON" method="_on_pressed"]

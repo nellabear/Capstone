@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsyj5rp4osv58"]
+
+[ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_g2mm4"]
+[ext_resource type="Script" path="res://lobby.gd" id="1_ut83g"]
+[ext_resource type="Texture2D" uid="uid://chb6yt6trccaj" path="res://PICTURES/10.png" id="2_pw3o4"]
+[ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="4_238yv"]
+[ext_resource type="Theme" uid="uid://dkib15q1kbbj3" path="res://PICTURES/BUTTONS/STARTBUTTON.tres" id="5_f07q2"]
+[ext_resource type="Script" path="res://hostbackbutton.gd" id="5_t8ykw"]
+[ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="7_mi053"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Lobby" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_ut83g")
+
+[node name="TextureRect" type="TextureRect" parent="Lobby"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g2mm4")
+expand_mode = 1
+
+[node name="BACK BUTTON" type="TextureButton" parent="Lobby"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 6.0
+offset_right = 333.0
+offset_bottom = 102.0
+texture_normal = ExtResource("4_238yv")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_t8ykw")
+
+[node name="lobby_code_label" type="Label" parent="Lobby"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.0
+offset_top = 77.0
+offset_right = 208.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="difficulty_label" type="Label" parent="Lobby"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.5
+offset_top = -61.0
+offset_right = 176.5
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="Button" parent="Lobby"]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 573.0
+offset_right = 1111.0
+offset_bottom = 634.0
+theme = ExtResource("5_f07q2")
+
+[node name="player_list" type="ItemList" parent="Lobby"]
+layout_mode = 2
+offset_left = 230.0
+offset_top = 211.0
+offset_right = 923.0
+offset_bottom = 530.0
+
+[node name="player_list_label" type="Label" parent="Lobby/player_list"]
+layout_mode = 2
+offset_left = -0.5
+offset_top = 4.0
+offset_right = 692.5
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="aaaaa" type="TextureButton" parent="."]
+visible = false
+offset_left = 761.0
+offset_top = 555.0
+offset_right = 1149.0
+offset_bottom = 648.0
+texture_normal = ExtResource("2_pw3o4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MasterMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mi053")
+autoplay = true
+
+[connection signal="pressed" from="Lobby/BACK BUTTON" to="Lobby/BACK BUTTON" method="_on_pressed"]
+[connection signal="pressed" from="Lobby/start_button" to="Lobby" method="_on_start_button_pressed"]
+[connection signal="pressed" from="aaaaa" to="Lobby" method="_on_start_game_pressed"]

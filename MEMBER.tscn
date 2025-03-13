@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://okvj5epdpuqj"]
+
+[ext_resource type="Script" path="res://MemberInput.gd" id="1_n1jlm"]
+[ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_xp4mi"]
+[ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="2_5uh02"]
+[ext_resource type="Script" path="res://back.gd" id="3_ffjgg"]
+[ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="5_u3dg5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_n1jlm")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xp4mi")
+expand_mode = 1
+
+[node name="BACK BUTTON" type="TextureButton" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 6.0
+offset_right = 333.0
+offset_bottom = 102.0
+texture_normal = ExtResource("2_5uh02")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ffjgg")
+
+[node name="CodeInput" type="LineEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -37.5
+offset_right = 184.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JoinButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 195.0
+offset_top = -361.0
+offset_right = 282.0
+offset_bottom = -286.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ErrorLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = 43.0
+offset_right = 144.5
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MasterMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_u3dg5")
+autoplay = true
+
+[connection signal="pressed" from="Control/TextureRect/BACK BUTTON" to="Control/TextureRect/BACK BUTTON" method="_on_pressed"]
+[connection signal="pressed" from="Control/JoinButton" to="Control" method="_on_join_button_pressed"]
