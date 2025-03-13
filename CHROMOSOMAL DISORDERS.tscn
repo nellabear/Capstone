@@ -33,8 +33,10 @@ script = ExtResource("2_8ciau")
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextureRect"]
 layout_mode = 0
-offset_right = 219.0
-offset_bottom = 369.0
+offset_left = -316.0
+offset_top = 93.0
+offset_right = 2184.0
+offset_bottom = 693.0
 texture = ExtResource("3_uygyp")
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]
