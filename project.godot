@@ -24,3 +24,8 @@ AudioManager="*res://audio_manager.gd"
 [display]
 
 window/size/always_on_top=true
+window/size/no_focus=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
