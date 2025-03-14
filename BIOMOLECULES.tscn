@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3hlorx5r2560"]
 
-[ext_resource type="Texture2D" uid="uid://b545h8fsc3x3b" path="res://PICTURES/CELL THEORY/landscape (10).png" id="1_3yw8b"]
+[ext_resource type="Texture2D" uid="uid://c3cvnxpojlaxv" path="res://landscape (6).png" id="1_rh6f8"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_jpq8g"]
 
 [node name="Node2D" type="Node2D"]
@@ -18,16 +18,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_3yw8b")
+texture = ExtResource("1_rh6f8")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control/TextureRect"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 162.0
-offset_top = 6.0
-offset_right = 200.0
-offset_bottom = 47.0
+offset_left = 91.0
+offset_top = 19.0
+offset_right = 146.0
+offset_bottom = 80.0
 script = ExtResource("2_jpq8g")
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+offset_left = 33.0
+offset_top = 136.0
+offset_right = 239.0
+offset_bottom = 354.0
+text = "biomolecule"
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]
