@@ -94,19 +94,6 @@ script = ExtResource("4_y60bn")
 stream = ExtResource("4_62ehu")
 autoplay = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 553.0
-offset_top = 213.0
-offset_right = 612.0
-offset_bottom = 499.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_63ls3")
-expand_mode = 1
-
 [connection signal="pressed" from="Control/TextureRect/BACK BUTTON" to="Control/TextureRect/BACK BUTTON" method="_on_pressed"]
 [connection signal="pressed" from="Control/CELL THEORY" to="Control/CELL THEORY" method="_on_pressed"]
 [connection signal="pressed" from="Control/CELL STRUCTURE" to="Control/CELL STRUCTURE" method="_on_pressed"]
