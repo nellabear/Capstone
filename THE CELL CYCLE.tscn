@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://8y02i8165ltk"]
 
-[ext_resource type="Texture2D" uid="uid://b545h8fsc3x3b" path="res://PICTURES/CELL THEORY/landscape (10).png" id="1_n16xc"]
+[ext_resource type="Texture2D" uid="uid://bu5v7181vsa4x" path="res://landscape (7).png" id="1_3l0i8"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_j4iyx"]
 
 [node name="Node2D" type="Node2D"]
@@ -18,16 +18,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_n16xc")
+texture = ExtResource("1_3l0i8")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control/TextureRect"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 162.0
-offset_top = 6.0
-offset_right = 200.0
-offset_bottom = 47.0
+offset_left = 88.0
+offset_top = 19.0
+offset_right = 148.0
+offset_bottom = 81.0
 script = ExtResource("2_j4iyx")
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+offset_left = 7.0
+offset_top = 144.0
+offset_right = 213.0
+offset_bottom = 362.0
+text = "cell cycle
+"
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]
