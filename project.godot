@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AudioManager="*res://audio_manager.gd"
 MultiplayerManager="*res://MultiplayerManager.gd"
+AudioManager="*res://audio_manager.gd"
 
 [display]
 

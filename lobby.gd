@@ -26,9 +26,9 @@ func start_server():
 	var result = peer.create_server(port, max_players)  
 	
 	if result != OK:
-		print("Failed to start server on port %d" % port)
+		print("❌ Failed to start server on port", port, "Error code:", result)
 		return
-
+	
 	multiplayer.multiplayer_peer = peer
 	print("Server started on port 9999")
 	print("✅ Peer set: ", multiplayer.multiplayer_peer != null)
@@ -45,26 +45,15 @@ func on_player_connected(player_id):
 	print("Player", player_id, "has connected!")
 	
 	if multiplayer.is_server():
-		if multiplayer.get_unique_id() == player_id:
-			MultiplayerManager.players[player_id] = "Player 1"
-		else:
-			var player_number = MultiplayerManager.players.size() + 1
-			MultiplayerManager.players[player_id] = "Player " + str(player_number)
-			
-		MultiplayerManager.lobby_updated.emit()  # 
-		print("Updated player list:", MultiplayerManager.players)
-		
-	if get_tree().get_multiplayer().is_server():
 		var player_number = MultiplayerManager.players.size() + 1
 		MultiplayerManager.players[player_id] = "Player " + str(player_number)
-		
 		MultiplayerManager.lobby_updated.emit() 
 	
 	
 @rpc("reliable", "call_local")  
 func set_lobby_code(code: String):
 	room_code = code
-	room_code_label.text = "" + room_code
+	room_code_label.text = "Lobby Code: " + room_code
 	
 	
 func create_lobby():

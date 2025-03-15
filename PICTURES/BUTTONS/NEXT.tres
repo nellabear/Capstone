@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=4 uid="uid://bosfcvjit4t7o"]
+[gd_resource type="Theme" load_steps=11 format=4 uid="uid://bosfcvjit4t7o"]
 
 [ext_resource type="Texture2D" uid="uid://ln6itljfx35c" path="res://PICTURES/BACKGROUNDS/landscape (2500 x 1080 px) (2500 x 600 px) (6).png" id="1_l2ifr"]
 
@@ -1602,13 +1602,9 @@ cache/0/13/0/glyphs/45/texture_idx = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jurj7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3x7s"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2eco"]
 texture = ExtResource("1_l2ifr")
 region_rect = Rect2(1033.45, 34.5836, 514.703, 505.287)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uiqpj"]
 
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -1632,6 +1628,6 @@ Button/font_sizes/font_size = 16
 Button/fonts/font = SubResource("FontFile_eku2o")
 Button/styles/disabled = SubResource("StyleBoxEmpty_u8hs6")
 Button/styles/focus = SubResource("StyleBoxEmpty_jurj7")
-Button/styles/hover = SubResource("StyleBoxEmpty_w3x7s")
+Button/styles/hover = SubResource("StyleBoxTexture_m2eco")
 Button/styles/normal = SubResource("StyleBoxTexture_m2eco")
-Button/styles/pressed = SubResource("StyleBoxEmpty_uiqpj")
+Button/styles/pressed = SubResource("StyleBoxTexture_m2eco")

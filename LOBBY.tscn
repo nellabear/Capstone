@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dsyj5rp4osv58"]
 
-[ext_resource type="Script" path="res://Lobby.gd" id="1_6tbgy"]
-[ext_resource type="Texture2D" uid="uid://dl8co5tbpfym2" path="res://PICTURES/BACKGROUNDS/landscape (14) (2).png" id="2_xsiaj"]
+[ext_resource type="Script" path="res://lobby.gd" id="1_geb56"]
+[ext_resource type="Texture2D" uid="uid://cijk6cddx3rfj" path="res://PICTURES/BACKGROUNDS/landscape (11).png" id="2_sx763"]
 [ext_resource type="Script" path="res://LOBBYBACKBUTTON.gd" id="3_wmsdt"]
 [ext_resource type="FontFile" uid="uid://buvw3iifvn4n7" path="res://PICTURES/FONT/Happy School.ttf" id="3_wq21r"]
 [ext_resource type="Theme" uid="uid://bgqig27qthhma" path="res://PICTURES/BUTTONS/PROCEED.tres" id="4_4rylm"]
@@ -15,7 +15,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("1_6tbgy")
+script = ExtResource("1_geb56")
 
 [node name="TextureRect" type="TextureRect" parent="Lobby"]
 layout_mode = 1
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xsiaj")
+texture = ExtResource("2_sx763")
 expand_mode = 1
 
 [node name="room_code_label" type="Label" parent="Lobby"]
@@ -32,13 +32,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -44.0
-offset_top = 44.0
-offset_right = 200.0
-offset_bottom = 86.0
+offset_left = -182.0
+offset_top = 39.0
+offset_right = 203.0
+offset_bottom = 90.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_wq21r")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 37
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 162
@@ -87,9 +87,11 @@ offset_left = 236.0
 offset_top = 172.0
 offset_right = 932.0
 offset_bottom = 489.0
+theme_override_constants/separation = 20
 
 [node name="PlayerList" type="Label" parent="Lobby/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wq21r")
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
