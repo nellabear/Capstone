@@ -32,6 +32,11 @@ func join_lobby(room_code: String):
 
 	var host_id = 1 
 	rpc_id(host_id, "request_lobby_entry", multiplayer.get_unique_id())
+	
+	print("LineEdit Editable:", room_code_input.editable)
+	print("LineEdit Visible:", room_code_input.visible)
+	print("Parent Mouse Filter:", room_code_input.get_parent().mouse_filter)
+	room_code_input.grab_focus()
 
 func _on_connected_to_server():
 	print("Successfully connected to server!")

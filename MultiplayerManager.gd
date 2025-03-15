@@ -23,7 +23,7 @@ func _ready():
 	multiplayer.peer_connected.connect(_on_player_connected)
 	multiplayer.peer_disconnected.connect(_on_player_disconnected)
 	MultiplayerManager.lobby_updated.connect(update_player_list_display)
-
+	
 	lobby = preload("res://LOBBY.tscn").instantiate()
 	add_child(lobby)
 
