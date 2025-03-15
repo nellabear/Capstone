@@ -1,6 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=4 uid="uid://di6svn36acl4m"]
-
-[ext_resource type="Texture2D" uid="uid://bfnwebhw12m7p" path="res://PICTURES/BACKGROUNDS/landscape (2500 x 1080 px) (2500 x 600 px) (4).png" id="1_osh5s"]
+[gd_resource type="Theme" load_steps=10 format=4 uid="uid://di6svn36acl4m"]
 
 [sub_resource type="Image" id="Image_8felc"]
 data = {
@@ -1521,7 +1519,6 @@ cache/0/13/0/glyphs/606/texture_idx = 0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mjlff"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsha1"]
-texture = ExtResource("1_osh5s")
 region_rect = Rect2(545.391, 77.1198, 1206.2, 395.442)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1be0"]

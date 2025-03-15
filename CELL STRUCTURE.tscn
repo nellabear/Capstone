@@ -31,6 +31,7 @@ offset_bottom = 79.0
 script = ExtResource("2_rq8b2")
 
 [node name="Label" type="Label" parent="Control/Background"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 135.0
 offset_right = 214.0

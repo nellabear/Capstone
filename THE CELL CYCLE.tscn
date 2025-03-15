@@ -31,6 +31,7 @@ offset_bottom = 81.0
 script = ExtResource("2_j4iyx")
 
 [node name="Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 144.0
 offset_right = 213.0

@@ -64,7 +64,7 @@ func on_player_connected(player_id):
 @rpc("reliable", "call_local")  
 func set_lobby_code(code: String):
 	room_code = code
-	room_code_label.text = "Room Code: " + room_code
+	room_code_label.text = "" + room_code
 	
 	
 func create_lobby():
