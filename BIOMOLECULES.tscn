@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3hlorx5r2560"]
+[gd_scene load_steps=7 format=3 uid="uid://b3hlorx5r2560"]
 
-[ext_resource type="Texture2D" uid="uid://c3cvnxpojlaxv" path="res://landscape (6).png" id="1_rh6f8"]
+[ext_resource type="Texture2D" uid="uid://du566nhdek87m" path="res://landscape (4).png" id="1_6biq1"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_jpq8g"]
+[ext_resource type="Texture2D" uid="uid://bgpi64bafrxnc" path="res://PICTURES/1.png" id="2_y4vw5"]
+[ext_resource type="Texture2D" uid="uid://dfwtsdw362w23" path="res://TRUEORFALSE/UI/21.png" id="3_qrgmh"]
+[ext_resource type="Script" path="res://biomolecxcules.gd" id="5_s5f1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi55e"]
+size = Vector2(829, 470)
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,6 +17,33 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
+[node name="Background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6biq1")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="Control/Background"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 142.0
+offset_right = 984.0
+offset_bottom = 614.0
+
+[node name="lavels" type="Node2D" parent="Control/Background/Panel"]
+clip_children = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_right = 829.0
+offset_bottom = 472.0
+texture = ExtResource("2_y4vw5")
+expand_mode = 1
+
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -18,24 +51,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_rh6f8")
+texture = ExtResource("3_qrgmh")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control/TextureRect"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 91.0
-offset_top = 19.0
-offset_right = 146.0
-offset_bottom = 80.0
+offset_left = 100.0
+offset_top = 26.0
+offset_right = 139.0
+offset_bottom = 77.0
 script = ExtResource("2_jpq8g")
 
-[node name="Label" type="Label" parent="Control/TextureRect"]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 136.0
-offset_right = 239.0
-offset_bottom = 354.0
-text = "biomolecule"
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(0, -1)
+script = ExtResource("5_s5f1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(563.5, 379)
+shape = SubResource("RectangleShape2D_oi55e")
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]

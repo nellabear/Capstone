@@ -1,7 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://cejwag5ib2lhk"]
+[gd_scene load_steps=60 format=3 uid="uid://cejwag5ib2lhk"]
 
 [ext_resource type="Texture2D" uid="uid://du566nhdek87m" path="res://landscape (4).png" id="1_8xxb3"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_rq8b2"]
+[ext_resource type="Script" path="res://scrolll.gd" id="3_jq5sn"]
+[ext_resource type="Texture2D" uid="uid://bgpi64bafrxnc" path="res://PICTURES/1.png" id="3_mwh7g"]
+[ext_resource type="Texture2D" uid="uid://d1848r50icy3e" path="res://PICTURES/2.png" id="4_1et0a"]
+[ext_resource type="Texture2D" uid="uid://dju0y776ay4vf" path="res://PICTURES/3.png" id="5_coccq"]
+[ext_resource type="Texture2D" uid="uid://cqr7xbiue6mn0" path="res://PICTURES/4.png" id="6_ex3xn"]
+[ext_resource type="Texture2D" uid="uid://4jlee71o1c7y" path="res://PICTURES/5.png" id="7_qvsv3"]
+[ext_resource type="Texture2D" uid="uid://di6w8rlkl62uy" path="res://PICTURES/pagge 6.png" id="8_e44bo"]
+[ext_resource type="Texture2D" uid="uid://dnjrw4da46uj1" path="res://PICTURES/page 7.png" id="9_ln3hi"]
+[ext_resource type="Texture2D" uid="uid://c36lhli8nmr78" path="res://PICTURES/page 8.png" id="10_m62ve"]
+[ext_resource type="Texture2D" uid="uid://chb6yt6trccaj" path="res://PICTURES/10.png" id="11_okqab"]
+[ext_resource type="Texture2D" uid="uid://bgbwaxqsj3kkm" path="res://PICTURES/page 9.png" id="11_op3oo"]
+[ext_resource type="Texture2D" uid="uid://6cgbsr5pdj7d" path="res://PICTURES/11.png" id="12_hiu0p"]
+[ext_resource type="Texture2D" uid="uid://dkprsu7vdny8k" path="res://TRUEORFALSE/landscape (11).png" id="12_rbs04"]
+[ext_resource type="Texture2D" uid="uid://dtqm508syyp5d" path="res://PICTURES/12.png" id="13_5akga"]
+[ext_resource type="Texture2D" uid="uid://bkbkyyk6ngjf7" path="res://PICTURES/13.png" id="14_5bniq"]
+[ext_resource type="Texture2D" uid="uid://bycsv66uj82gm" path="res://PICTURES/14.png" id="15_voidg"]
+[ext_resource type="Texture2D" uid="uid://drh334lndlv4i" path="res://PICTURES/15.png" id="16_6q1n4"]
+[ext_resource type="Texture2D" uid="uid://dg44tr0vayyn5" path="res://PICTURES/CELL STRUCTURE/16.png" id="17_bsukp"]
+[ext_resource type="Texture2D" uid="uid://x2gatgslunsd" path="res://PICTURES/CELL STRUCTURE/17.png" id="18_ovoo0"]
+[ext_resource type="Texture2D" uid="uid://c13ac6rjqd1es" path="res://PICTURES/CELL STRUCTURE/18.png" id="19_mey3w"]
+[ext_resource type="Texture2D" uid="uid://y4jucitepvee" path="res://PICTURES/CELL STRUCTURE/19.png" id="20_kmc0f"]
+[ext_resource type="Texture2D" uid="uid://dpu0f5ueniyrt" path="res://PICTURES/CELL STRUCTURE/21.png" id="21_4qewa"]
+[ext_resource type="Texture2D" uid="uid://dmhu7mfgkhxtf" path="res://PICTURES/CELL STRUCTURE/22.png" id="22_7kx6s"]
+[ext_resource type="Texture2D" uid="uid://b8rv22ryvogky" path="res://PICTURES/CELL STRUCTURE/23.png" id="23_pyjsi"]
+[ext_resource type="Texture2D" uid="uid://ddvhlnlehj0p3" path="res://PICTURES/CELL STRUCTURE/24.png" id="24_sn1ni"]
+[ext_resource type="Texture2D" uid="uid://xrc5g4amufyo" path="res://PICTURES/CELL STRUCTURE/25.png" id="25_desmy"]
+[ext_resource type="Texture2D" uid="uid://dj1kjuohqvekd" path="res://PICTURES/CELL STRUCTURE/26.png" id="26_k2b1t"]
+[ext_resource type="Texture2D" uid="uid://daaen6gqa8cwx" path="res://PICTURES/CELL STRUCTURE/27.png" id="27_q6ko4"]
+[ext_resource type="Texture2D" uid="uid://be6aptk4ctytj" path="res://PICTURES/CELL STRUCTURE/28.png" id="28_vtc5h"]
+[ext_resource type="Texture2D" uid="uid://iiokxmkttwcl" path="res://PICTURES/CELL STRUCTURE/29.png" id="29_5hylo"]
+[ext_resource type="Texture2D" uid="uid://c4k5mde85ur8i" path="res://PICTURES/CELL STRUCTURE/30.png" id="30_02m0l"]
+[ext_resource type="Texture2D" uid="uid://cnghl5oiwwwn4" path="res://PICTURES/CELL STRUCTURE/31.png" id="31_ps75j"]
+[ext_resource type="Texture2D" uid="uid://0cb46plahhw" path="res://PICTURES/CELL STRUCTURE/32.png" id="32_s25mq"]
+[ext_resource type="Texture2D" uid="uid://umo07x1jtext" path="res://PICTURES/CELL STRUCTURE/33.png" id="33_xt7xy"]
+[ext_resource type="Texture2D" uid="uid://ce1v65cbcddvr" path="res://PICTURES/CELL STRUCTURE/34.png" id="34_nkqym"]
+[ext_resource type="Texture2D" uid="uid://baro8k0lxfg4l" path="res://PICTURES/CELL STRUCTURE/35.png" id="35_nti0f"]
+[ext_resource type="Texture2D" uid="uid://7t8er2bnvwu7" path="res://PICTURES/CELL STRUCTURE/36.png" id="36_egx7p"]
+[ext_resource type="Texture2D" uid="uid://c51rmjnxswxqg" path="res://PICTURES/CELL STRUCTURE/37.png" id="37_hou3w"]
+[ext_resource type="Texture2D" uid="uid://brpigd5wie6o0" path="res://PICTURES/CELL STRUCTURE/38.png" id="38_3puqs"]
+[ext_resource type="Texture2D" uid="uid://h1inpm7u7sxl" path="res://PICTURES/CELL STRUCTURE/39.png" id="39_g86t4"]
+[ext_resource type="Texture2D" uid="uid://boal2dgmirxe3" path="res://PICTURES/CELL STRUCTURE/40.png" id="40_jbmcp"]
+[ext_resource type="Texture2D" uid="uid://bhgdjl0m6bw70" path="res://PICTURES/CELL STRUCTURE/41.png" id="41_pmrys"]
+[ext_resource type="Texture2D" uid="uid://bgfirrxfv58tm" path="res://PICTURES/CELL STRUCTURE/42.png" id="42_svw8k"]
+[ext_resource type="Texture2D" uid="uid://b0qnf1v1fuw4l" path="res://PICTURES/CELL STRUCTURE/43.png" id="43_b0yea"]
+[ext_resource type="Texture2D" uid="uid://xy40kk8fjga1" path="res://PICTURES/CELL STRUCTURE/44.png" id="44_j1rxl"]
+[ext_resource type="Texture2D" uid="uid://cctrj2kgxtysv" path="res://PICTURES/CELL STRUCTURE/45.png" id="45_y2nhq"]
+[ext_resource type="Texture2D" uid="uid://bs6yugxy0fjml" path="res://PICTURES/CELL STRUCTURE/46.png" id="46_dwfbx"]
+[ext_resource type="Texture2D" uid="uid://027uxri2f4vx" path="res://PICTURES/CELL STRUCTURE/47.png" id="47_3kd6n"]
+[ext_resource type="Texture2D" uid="uid://bccouy70ftc7m" path="res://PICTURES/CELL STRUCTURE/48.png" id="48_mxipv"]
+[ext_resource type="Texture2D" uid="uid://dofucxxv5u6s5" path="res://PICTURES/CELL STRUCTURE/49.png" id="49_fc3pj"]
+[ext_resource type="Texture2D" uid="uid://dli0wixb5fxyt" path="res://PICTURES/CELL STRUCTURE/50.png" id="50_0n6p0"]
+[ext_resource type="Texture2D" uid="uid://btfcwmffnbjoo" path="res://PICTURES/CELL STRUCTURE/51.png" id="51_5qihk"]
+[ext_resource type="Texture2D" uid="uid://dcps32go0vatx" path="res://PICTURES/CELL STRUCTURE/52.png" id="52_rqyba"]
+[ext_resource type="Texture2D" uid="uid://ba8rop0o2tm8s" path="res://PICTURES/CELL STRUCTURE/53.png" id="53_dod7e"]
+[ext_resource type="Texture2D" uid="uid://cf8l8uvwxp3wu" path="res://PICTURES/CELL STRUCTURE/54.png" id="54_ki820"]
+[ext_resource type="Texture2D" uid="uid://1tcvhwsl7vc6" path="res://PICTURES/CELL STRUCTURE/55.png" id="55_2116e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oegpy"]
+size = Vector2(829, 470)
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,28 +80,478 @@ grow_vertical = 2
 texture = ExtResource("1_8xxb3")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="Control/Background"]
-show_behind_parent = true
+[node name="Panel" type="Panel" parent="Control/Background"]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 17.0
-offset_right = 147.0
-offset_bottom = 79.0
-script = ExtResource("2_rq8b2")
-
-[node name="Label" type="Label" parent="Control/Background"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 135.0
-offset_right = 214.0
-offset_bottom = 353.0
-text = "cell structure
-"
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 174.0
+offset_left = 158.0
 offset_top = 142.0
-offset_right = 1000.0
+offset_right = 984.0
 offset_bottom = 614.0
 
-[connection signal="pressed" from="Control/Background/Button" to="Control/Background/Button" method="_on_pressed"]
+[node name="lavels" type="Node2D" parent="Control/Background/Panel"]
+clip_children = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_right = 829.0
+offset_bottom = 472.0
+texture = ExtResource("3_mwh7g")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 3.0
+offset_top = 504.0
+offset_right = 823.0
+offset_bottom = 1012.0
+texture = ExtResource("4_1et0a")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 2.0
+offset_top = 1043.0
+offset_right = 824.0
+offset_bottom = 1545.0
+texture = ExtResource("5_coccq")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 3.0
+offset_top = 1577.0
+offset_right = 820.0
+offset_bottom = 2082.0
+texture = ExtResource("6_ex3xn")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 2.0
+offset_top = 2112.0
+offset_right = 820.0
+offset_bottom = 2587.0
+texture = ExtResource("7_qvsv3")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 3.0
+offset_top = 2621.0
+offset_right = 827.0
+offset_bottom = 3083.0
+texture = ExtResource("8_e44bo")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 2.0
+offset_top = 3114.0
+offset_right = 826.0
+offset_bottom = 3579.0
+texture = ExtResource("9_ln3hi")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 1.0
+offset_top = 3610.0
+offset_right = 827.0
+offset_bottom = 4059.0
+texture = ExtResource("10_m62ve")
+expand_mode = 1
+
+[node name="TextureRect9" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 3.0
+offset_top = 4092.0
+offset_right = 830.0
+offset_bottom = 4581.0
+texture = ExtResource("11_op3oo")
+expand_mode = 1
+
+[node name="TextureRect10" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 5.0
+offset_top = 4612.0
+offset_right = 834.0
+offset_bottom = 5080.0
+texture = ExtResource("11_okqab")
+expand_mode = 1
+
+[node name="TextureRect11" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 6.0
+offset_top = 5112.0
+offset_right = 837.0
+offset_bottom = 5580.0
+texture = ExtResource("12_hiu0p")
+expand_mode = 1
+
+[node name="TextureRect12" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 7.0
+offset_top = 5613.0
+offset_right = 840.0
+offset_bottom = 6084.0
+texture = ExtResource("13_5akga")
+expand_mode = 1
+
+[node name="TextureRect13" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 9.0
+offset_top = 6114.0
+offset_right = 842.0
+offset_bottom = 6585.0
+texture = ExtResource("14_5bniq")
+expand_mode = 1
+
+[node name="TextureRect14" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 9.0
+offset_top = 6610.0
+offset_right = 841.0
+offset_bottom = 7087.0
+texture = ExtResource("15_voidg")
+expand_mode = 1
+
+[node name="TextureRect15" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 13.0
+offset_top = 7116.0
+offset_right = 843.0
+offset_bottom = 7587.0
+texture = ExtResource("16_6q1n4")
+expand_mode = 1
+
+[node name="TextureRect16" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 14.0
+offset_top = 7612.0
+offset_right = 847.0
+offset_bottom = 8087.0
+texture = ExtResource("17_bsukp")
+expand_mode = 1
+
+[node name="TextureRect17" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 17.0
+offset_top = 8115.0
+offset_right = 850.0
+offset_bottom = 8592.0
+texture = ExtResource("18_ovoo0")
+expand_mode = 1
+
+[node name="TextureRect18" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 22.0
+offset_top = 8620.0
+offset_right = 852.0
+offset_bottom = 9101.0
+texture = ExtResource("19_mey3w")
+expand_mode = 1
+
+[node name="TextureRect19" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 29.0
+offset_top = 9132.0
+offset_right = 849.0
+offset_bottom = 9603.0
+texture = ExtResource("20_kmc0f")
+expand_mode = 1
+
+[node name="TextureRect20" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 36.0
+offset_top = 9632.0
+offset_right = 856.0
+offset_bottom = 10103.0
+texture = ExtResource("16_6q1n4")
+expand_mode = 1
+
+[node name="TextureRect21" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 41.0
+offset_top = 10138.0
+offset_right = 861.0
+offset_bottom = 10609.0
+texture = ExtResource("21_4qewa")
+expand_mode = 1
+
+[node name="TextureRect22" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 44.0
+offset_top = 10644.0
+offset_right = 864.0
+offset_bottom = 11115.0
+texture = ExtResource("22_7kx6s")
+expand_mode = 1
+
+[node name="TextureRect23" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 44.0
+offset_top = 11143.0
+offset_right = 864.0
+offset_bottom = 11614.0
+texture = ExtResource("23_pyjsi")
+expand_mode = 1
+
+[node name="TextureRect24" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 47.0
+offset_top = 11647.0
+offset_right = 867.0
+offset_bottom = 12118.0
+texture = ExtResource("24_sn1ni")
+expand_mode = 1
+
+[node name="TextureRect25" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 49.0
+offset_top = 12151.0
+offset_right = 869.0
+offset_bottom = 12622.0
+texture = ExtResource("25_desmy")
+expand_mode = 1
+
+[node name="TextureRect26" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 53.0
+offset_top = 12653.0
+offset_right = 873.0
+offset_bottom = 13124.0
+texture = ExtResource("26_k2b1t")
+expand_mode = 1
+
+[node name="TextureRect27" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 55.0
+offset_top = 13179.0
+offset_right = 875.0
+offset_bottom = 13650.0
+texture = ExtResource("27_q6ko4")
+expand_mode = 1
+
+[node name="TextureRect28" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 57.0
+offset_top = 13698.0
+offset_right = 877.0
+offset_bottom = 14169.0
+texture = ExtResource("28_vtc5h")
+expand_mode = 1
+
+[node name="TextureRect29" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 59.0
+offset_top = 14214.0
+offset_right = 879.0
+offset_bottom = 14685.0
+texture = ExtResource("29_5hylo")
+expand_mode = 1
+
+[node name="TextureRect30" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 64.0
+offset_top = 14728.0
+offset_right = 884.0
+offset_bottom = 15199.0
+texture = ExtResource("30_02m0l")
+expand_mode = 1
+
+[node name="TextureRect31" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 69.0
+offset_top = 15238.0
+offset_right = 889.0
+offset_bottom = 15709.0
+texture = ExtResource("31_ps75j")
+expand_mode = 1
+
+[node name="TextureRect32" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 72.0
+offset_top = 15749.0
+offset_right = 892.0
+offset_bottom = 16220.0
+texture = ExtResource("32_s25mq")
+expand_mode = 1
+
+[node name="TextureRect33" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 72.0
+offset_top = 16259.0
+offset_right = 892.0
+offset_bottom = 16730.0
+texture = ExtResource("33_xt7xy")
+expand_mode = 1
+
+[node name="TextureRect34" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 72.0
+offset_top = 16768.0
+offset_right = 892.0
+offset_bottom = 17239.0
+texture = ExtResource("34_nkqym")
+expand_mode = 1
+
+[node name="TextureRect35" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 73.0
+offset_top = 17280.0
+offset_right = 893.0
+offset_bottom = 17751.0
+texture = ExtResource("35_nti0f")
+expand_mode = 1
+
+[node name="TextureRect36" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 76.0
+offset_top = 17793.0
+offset_right = 896.0
+offset_bottom = 18264.0
+texture = ExtResource("36_egx7p")
+expand_mode = 1
+
+[node name="TextureRect37" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 81.0
+offset_top = 18305.0
+offset_right = 901.0
+offset_bottom = 18776.0
+texture = ExtResource("37_hou3w")
+expand_mode = 1
+
+[node name="TextureRect38" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 83.0
+offset_top = 18810.0
+offset_right = 903.0
+offset_bottom = 19281.0
+texture = ExtResource("38_3puqs")
+expand_mode = 1
+
+[node name="TextureRect39" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 82.0
+offset_top = 19323.0
+offset_right = 902.0
+offset_bottom = 19794.0
+texture = ExtResource("39_g86t4")
+expand_mode = 1
+
+[node name="TextureRect40" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 84.0
+offset_top = 19834.0
+offset_right = 904.0
+offset_bottom = 20305.0
+texture = ExtResource("40_jbmcp")
+expand_mode = 1
+
+[node name="TextureRect41" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 84.0
+offset_top = 20348.0
+offset_right = 904.0
+offset_bottom = 20819.0
+texture = ExtResource("41_pmrys")
+expand_mode = 1
+
+[node name="TextureRect42" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 87.0
+offset_top = 20859.0
+offset_right = 907.0
+offset_bottom = 21330.0
+texture = ExtResource("42_svw8k")
+expand_mode = 1
+
+[node name="TextureRect43" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 86.0
+offset_top = 21368.0
+offset_right = 906.0
+offset_bottom = 21839.0
+texture = ExtResource("43_b0yea")
+expand_mode = 1
+
+[node name="TextureRect44" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 91.0
+offset_top = 21879.0
+offset_right = 911.0
+offset_bottom = 22350.0
+texture = ExtResource("44_j1rxl")
+expand_mode = 1
+
+[node name="TextureRect45" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 91.0
+offset_top = 22390.0
+offset_right = 911.0
+offset_bottom = 22861.0
+texture = ExtResource("45_y2nhq")
+expand_mode = 1
+
+[node name="TextureRect46" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 90.0
+offset_top = 22900.0
+offset_right = 910.0
+offset_bottom = 23371.0
+texture = ExtResource("46_dwfbx")
+expand_mode = 1
+
+[node name="TextureRect47" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 90.0
+offset_top = 23408.0
+offset_right = 910.0
+offset_bottom = 23879.0
+texture = ExtResource("47_3kd6n")
+expand_mode = 1
+
+[node name="TextureRect48" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 92.0
+offset_top = 23916.0
+offset_right = 912.0
+offset_bottom = 24387.0
+texture = ExtResource("48_mxipv")
+expand_mode = 1
+
+[node name="TextureRect49" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 95.0
+offset_top = 24427.0
+offset_right = 915.0
+offset_bottom = 24898.0
+texture = ExtResource("49_fc3pj")
+expand_mode = 1
+
+[node name="TextureRect50" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 94.0
+offset_top = 24937.0
+offset_right = 914.0
+offset_bottom = 25408.0
+texture = ExtResource("50_0n6p0")
+expand_mode = 1
+
+[node name="TextureRect51" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 97.0
+offset_top = 25451.0
+offset_right = 917.0
+offset_bottom = 25922.0
+texture = ExtResource("51_5qihk")
+expand_mode = 1
+
+[node name="TextureRect52" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 99.0
+offset_top = 25966.0
+offset_right = 919.0
+offset_bottom = 26437.0
+texture = ExtResource("52_rqyba")
+expand_mode = 1
+
+[node name="TextureRect53" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 103.0
+offset_top = 26476.0
+offset_right = 923.0
+offset_bottom = 26947.0
+texture = ExtResource("53_dod7e")
+expand_mode = 1
+
+[node name="TextureRect54" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 103.0
+offset_top = 26988.0
+offset_right = 923.0
+offset_bottom = 27459.0
+texture = ExtResource("54_ki820")
+expand_mode = 1
+
+[node name="TextureRect55" type="TextureRect" parent="Control/Background/Panel/lavels"]
+offset_left = 103.0
+offset_top = 27502.0
+offset_right = 923.0
+offset_bottom = 27973.0
+texture = ExtResource("55_2116e")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_rbs04")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Control/TextureRect"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 26.0
+offset_right = 139.0
+offset_bottom = 77.0
+script = ExtResource("2_rq8b2")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_jq5sn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(571.5, 378)
+shape = SubResource("RectangleShape2D_oegpy")
+
+[connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]

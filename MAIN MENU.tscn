@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d14qyqubdvw5s" path="res://PICTURES/landscape (7).png" id="1_xk0pl"]
 [ext_resource type="Texture2D" uid="uid://bdc831bvj0yo4" path="res://PICTURES/9.png" id="2_foga5"]
-[ext_resource type="Texture2D" uid="uid://4jlee71o1c7y" path="res://PICTURES/5.png" id="3_4pv8o"]
+[ext_resource type="Texture2D" uid="uid://caycq5o3p3oms" path="res://TRUEORFALSE/4.png" id="3_e2rbf"]
 [ext_resource type="Script" path="res://button.gd" id="4_vdnms"]
 [ext_resource type="Texture2D" uid="uid://c1j700sc4hfb4" path="res://PICTURES/7.png" id="5_ew1cx"]
 [ext_resource type="Script" path="res://SETTINGSBUTTON.gd" id="6_ihkq5"]
@@ -79,7 +79,7 @@ offset_left = 362.0
 offset_top = 334.0
 offset_right = 789.0
 offset_bottom = 449.0
-texture = ExtResource("3_4pv8o")
+texture = ExtResource("3_e2rbf")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="PLAY IMAGE"]
