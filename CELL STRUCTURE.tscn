@@ -31,11 +31,18 @@ offset_bottom = 79.0
 script = ExtResource("2_rq8b2")
 
 [node name="Label" type="Label" parent="Control/Background"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 135.0
 offset_right = 214.0
 offset_bottom = 353.0
 text = "cell structure
 "
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 174.0
+offset_top = 142.0
+offset_right = 1000.0
+offset_bottom = 614.0
 
 [connection signal="pressed" from="Control/Background/Button" to="Control/Background/Button" method="_on_pressed"]

@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://1rdcvycssu3x"]
+[gd_scene load_steps=11 format=3 uid="uid://1rdcvycssu3x"]
 
 [ext_resource type="Texture2D" uid="uid://8tb2oswm01vm" path="res://landscape (3).png" id="1_rsdq3"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_tbcgk"]
 [ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="3_bkitg"]
+[ext_resource type="Texture2D" uid="uid://c412nnx7lxiod" path="res://landscape (16 x 11.249 in) (1).png" id="4_2q0rc"]
+[ext_resource type="Texture2D" uid="uid://bj6ekv12a0053" path="res://landscape (16 x 11.249 in) (2).png" id="5_7k8sh"]
+[ext_resource type="Script" path="res://scroll.gd" id="5_xm7rr"]
+[ext_resource type="Texture2D" uid="uid://br7f6cx1tauft" path="res://17.png" id="6_acqe8"]
+[ext_resource type="Texture2D" uid="uid://vuhyksaqbyem" path="res://18.png" id="7_o0vgf"]
+[ext_resource type="Texture2D" uid="uid://bercmq2mbc5w7" path="res://19.png" id="8_4eyh3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qexn"]
+size = Vector2(790.5, 458)
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,5 +49,95 @@ text = "cell theory"
 [node name="MasterMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_bkitg")
 autoplay = true
+
+[node name="Panel" type="Panel" parent="."]
+clip_children = 1
+offset_left = 182.0
+offset_top = 140.0
+offset_right = 973.0
+offset_bottom = 604.0
+
+[node name="lavels" type="Node2D" parent="Panel"]
+
+[node name="TextureRect" type="TextureRect" parent="Panel/lavels"]
+offset_top = 2.0
+offset_right = 790.0
+offset_bottom = 459.0
+texture = ExtResource("4_2q0rc")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/lavels"]
+offset_left = 1.0
+offset_top = 487.0
+offset_right = 790.0
+offset_bottom = 953.0
+texture = ExtResource("5_7k8sh")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/lavels"]
+offset_left = 4.0
+offset_top = 978.0
+offset_right = 788.0
+offset_bottom = 1469.0
+texture = ExtResource("6_acqe8")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Panel/lavels"]
+offset_left = 4.0
+offset_top = 1497.0
+offset_right = 791.0
+offset_bottom = 1944.0
+texture = ExtResource("7_o0vgf")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Panel/lavels"]
+offset_left = 6.0
+offset_top = 1974.0
+offset_right = 796.0
+offset_bottom = 2385.0
+texture = ExtResource("8_4eyh3")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect7" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect8" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect9" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect10" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect11" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect12" type="TextureRect" parent="Panel/lavels"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("5_xm7rr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(576.75, 371)
+shape = SubResource("RectangleShape2D_6qexn")
 
 [connection signal="pressed" from="Control/Background/Button" to="Control/Background/Button" method="_on_pressed"]
