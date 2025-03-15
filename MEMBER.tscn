@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://okvj5epdpuqj"]
+[gd_scene load_steps=11 format=3 uid="uid://okvj5epdpuqj"]
 
 [ext_resource type="Script" path="res://Join.gd" id="1_jjglr"]
-[ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_xp4mi"]
 [ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="2_5uh02"]
+[ext_resource type="Texture2D" uid="uid://bmt0r1evsrrob" path="res://PICTURES/BACKGROUNDS/landscape (14).png" id="2_nebjj"]
 [ext_resource type="Script" path="res://back.gd" id="3_ffjgg"]
+[ext_resource type="FontFile" uid="uid://buvw3iifvn4n7" path="res://PICTURES/FONT/Happy School.ttf" id="5_gvcbn"]
 [ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="5_u3dg5"]
+[ext_resource type="Theme" uid="uid://bosfcvjit4t7o" path="res://PICTURES/BUTTONS/NEXT.tres" id="6_utigx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xyle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqy2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilb81"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xp4mi")
+texture = ExtResource("2_nebjj")
 expand_mode = 1
 
 [node name="BACK BUTTON" type="TextureButton" parent="Join/TextureRect"]
@@ -43,12 +51,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -184.0
-offset_top = -37.5
-offset_right = 184.0
-offset_bottom = 37.5
+offset_left = 13.0
+offset_top = -53.0
+offset_right = 245.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_gvcbn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0xyle")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_dqy2i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ilb81")
+placeholder_text = "******"
 
 [node name="JoinButton" type="Button" parent="Join"]
 layout_mode = 1
@@ -57,12 +71,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 195.0
-offset_top = -361.0
-offset_right = 282.0
-offset_bottom = -286.0
+offset_left = 272.0
+offset_top = -379.0
+offset_right = 359.0
+offset_bottom = -304.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("6_utigx")
 
 [node name="ErrorLabel" type="Label" parent="Join"]
 layout_mode = 1
@@ -77,6 +92,10 @@ offset_right = 144.5
 offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_gvcbn")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MasterMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_u3dg5")

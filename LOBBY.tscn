@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsyj5rp4osv58"]
+[gd_scene load_steps=8 format=3 uid="uid://dsyj5rp4osv58"]
 
 [ext_resource type="Script" path="res://Lobby.gd" id="1_6tbgy"]
-[ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_g2mm4"]
+[ext_resource type="Texture2D" uid="uid://dl8co5tbpfym2" path="res://PICTURES/BACKGROUNDS/landscape (14) (2).png" id="2_xsiaj"]
 [ext_resource type="Script" path="res://LOBBYBACKBUTTON.gd" id="3_wmsdt"]
-[ext_resource type="Theme" uid="uid://dkib15q1kbbj3" path="res://PICTURES/BUTTONS/STARTBUTTON.tres" id="5_f07q2"]
+[ext_resource type="FontFile" uid="uid://buvw3iifvn4n7" path="res://PICTURES/FONT/Happy School.ttf" id="3_wq21r"]
+[ext_resource type="Theme" uid="uid://bgqig27qthhma" path="res://PICTURES/BUTTONS/PROCEED.tres" id="4_4rylm"]
+[ext_resource type="Theme" uid="uid://di6svn36acl4m" path="res://PICTURES/BUTTONS/BACK.tres" id="5_6t3y3"]
 [ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="7_mi053"]
 
 [node name="Node2D" type="Node2D"]
@@ -22,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_g2mm4")
+texture = ExtResource("2_xsiaj")
 expand_mode = 1
 
 [node name="room_code_label" type="Label" parent="Lobby"]
@@ -30,12 +32,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -208.0
-offset_top = 77.0
-offset_right = 208.0
-offset_bottom = 137.0
+offset_left = -44.0
+offset_top = 44.0
+offset_right = 200.0
+offset_bottom = 86.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_wq21r")
+theme_override_font_sizes/font_size = 33
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 162
@@ -59,13 +62,14 @@ vertical_alignment = 1
 
 [node name="start_button" type="Button" parent="Lobby"]
 layout_mode = 0
-offset_left = 802.0
-offset_top = 573.0
-offset_right = 1111.0
-offset_bottom = 634.0
-theme = ExtResource("5_f07q2")
+offset_left = 840.0
+offset_top = 566.0
+offset_right = 1091.0
+offset_bottom = 633.0
+theme = ExtResource("4_4rylm")
 
 [node name="player_list" type="ItemList" parent="Lobby"]
+visible = false
 layout_mode = 2
 offset_left = 230.0
 offset_top = 211.0
@@ -79,10 +83,10 @@ offset_bottom = 23.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Lobby"]
 layout_mode = 0
-offset_left = 229.0
-offset_top = 212.0
-offset_right = 925.0
-offset_bottom = 529.0
+offset_left = 236.0
+offset_top = 172.0
+offset_right = 932.0
+offset_bottom = 489.0
 
 [node name="PlayerList" type="Label" parent="Lobby/VBoxContainer"]
 layout_mode = 2
@@ -94,9 +98,10 @@ justification_flags = 162
 [node name="Button" type="Button" parent="Lobby"]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 30.0
-offset_right = 93.0
-offset_bottom = 70.0
+offset_top = 14.0
+offset_right = 197.0
+offset_bottom = 76.0
+theme = ExtResource("5_6t3y3")
 script = ExtResource("3_wmsdt")
 
 [node name="MasterMusic" type="AudioStreamPlayer" parent="."]

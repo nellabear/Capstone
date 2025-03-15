@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bhgi6q8o0ngri"]
 
 [ext_resource type="Script" path="res://GameMode.gd" id="1_bvrbe"]
-[ext_resource type="Texture2D" uid="uid://cei71036cyk0t" path="res://PICTURES/landscape (9).png" id="2_e64hr"]
+[ext_resource type="Texture2D" uid="uid://bslhy0h1o3obs" path="res://PICTURES/BACKGROUNDS/landscape (16).png" id="2_0uiau"]
 [ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="7_e00i5"]
 [ext_resource type="Texture2D" uid="uid://bdc831bvj0yo4" path="res://PICTURES/9.png" id="7_exepl"]
 [ext_resource type="Theme" uid="uid://dkib15q1kbbj3" path="res://PICTURES/BUTTONS/STARTBUTTON.tres" id="7_ufubj"]
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_e64hr")
+texture = ExtResource("2_0uiau")
 expand_mode = 1
 
 [node name="BACK BUTTON" type="TextureButton" parent="GameMode"]
@@ -52,6 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LOGO" type="TextureRect" parent="GameMode/VBoxContainer2"]
+visible = false
 custom_minimum_size = Vector2(50, 110)
 layout_mode = 2
 texture = ExtResource("7_exepl")
@@ -61,36 +62,37 @@ stretch_mode = 5
 [node name="EASY" type="Button" parent="GameMode"]
 clip_children = 2
 layout_mode = 0
-offset_left = 318.0
-offset_top = 160.0
-offset_right = 821.0
-offset_bottom = 304.0
+offset_left = 351.0
+offset_top = 255.0
+offset_right = 789.0
+offset_bottom = 383.0
 theme = ExtResource("11_2vkok")
 
 [node name="AVERAGE" type="Button" parent="GameMode"]
 layout_mode = 0
-offset_left = 353.0
-offset_top = 308.0
-offset_right = 902.0
-offset_bottom = 417.0
+offset_left = 388.0
+offset_top = 389.0
+offset_right = 848.0
+offset_bottom = 488.0
 theme = ExtResource("12_ccn4b")
 
 [node name="HARD" type="Button" parent="GameMode"]
 layout_mode = 0
-offset_left = 360.0
-offset_top = 416.0
-offset_right = 919.0
-offset_bottom = 525.0
+offset_left = 395.0
+offset_top = 482.0
+offset_right = 860.0
+offset_bottom = 589.0
 theme = ExtResource("13_wqbg5")
 
 [node name="QuestionCount" type="SpinBox" parent="GameMode"]
 layout_mode = 0
-offset_left = 505.0
-offset_top = 114.0
-offset_right = 588.063
-offset_bottom = 145.0
+offset_left = 624.0
+offset_top = 162.0
+offset_right = 707.063
+offset_bottom = 193.0
 
 [node name="StartButton" type="Button" parent="GameMode"]
+layout_mode = 0
 offset_left = 802.0
 offset_top = 573.0
 offset_right = 1111.0
