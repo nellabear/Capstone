@@ -1,108 +1,128 @@
-extends Node
+extends Control
 
-@export var max_players = 4
-var lobby_code: String
-var players = {}
-
-@onready var network_manager = get_node("/root/NetworkManager")
-@onready var player_list: ItemList = $player_list
-@onready var start_button: Button = $start_button
-@onready var lobby_code_label: Label = $lobby_code_label
-@onready var difficulty_label: Label = $difficulty_label
-@onready var player_list_label: Label = $player_list/player_list_label
-@export var selected_difficulty: String = ""
+@onready var room_code_label = $room_code_label
+@onready var player_list = $VBoxContainer/PlayerList
+@onready var start_button = $start_button
+@onready var custom_multiplayer = get_tree().get_multiplayer()
 
 
-func set_difficulty(difficulty):
-	selected_difficulty = difficulty
-	difficulty_label.text = "Difficulty: " + difficulty
-	network_manager.selected_difficulty = difficulty  
-
-
-func _on_start_button_pressed():
-	if !multiplayer.is_server():
-		print("❌ You are not the host!")
-		return
-		
-	print("📜 Current player list:", network_manager.player_list)
-	print("🔢 Number of players:", network_manager.player_list.size())
-	
-	if multiplayer.is_server() and network_manager.player_list.size() >= 2:
-		print("Game Starting with difficulty:", selected_difficulty)
-		network_manager.start_game.rpc(selected_difficulty)
-	else:
-		print("❌ Not enough players to start the game.")
-
+var room_code = ""  
 
 func _ready():
-	await get_tree().process_frame
-	print("✅ Network Manager:", network_manager)
-	print("Network Manager Node Path:", get_tree().get_nodes_in_group("network_manager"))
-	player_list = get_node_or_null("player_list")
-	print("Player list after waiting:", player_list)
-	var found_nodes = []
-	get_tree().call_group("player_list_group", "add_to_found_nodes")
-	print("Start button:", start_button)
+	if not multiplayer.is_server():
+		room_code_label.text = "Waiting for host..."
+		
+	start_server()
+	create_lobby()
+	MultiplayerManager.lobby_updated.connect(update_lobby)
+	update_lobby()
+	multiplayer.peer_connected.connect(on_player_connected)
 	
-	if start_button:
-		start_button.disabled = (network_manager.player_list.size() >= 2)
-	else:
-		print("ERROR: start_button is NULL")
-
+func start_server():
+	var port = 9999
+	var max_players = 4
 	
-	if has_node("player_list"):
-		player_list = get_node("player_list")
-		print("✅ player_list found:", player_list)
-	else:
-		print("❌ ERROR: player_list node NOT found!")
+	var peer = ENetMultiplayerPeer.new()
+	var result = peer.create_server(port, max_players)  
 	
-	await get_tree().process_frame
-	player_list = get_node("player_list")
-	player_list = find_child("player_list", true, false)
-	print("player_list:", player_list) 
-	
-	if player_list == null:
-		print("❌ player_list is NULL - Check node path!")
-
-	var game_difficulty = network_manager.selected_difficulty
-	print("Game started with difficulty:", game_difficulty)
-	
-	if network_manager == null:
-		print("❌ Error: NetworkManager not found!")
+	if result != OK:
+		print("Failed to start server on port %d" % port)
 		return
-		
-	if lobby_code_label:
-		lobby_code_label.text = "Lobby Code: " + str(network_manager.lobby_code)
-	else:
-		print("❌ Error: LobbyCodeLabel not found!")
-		
-	network_manager.lobby_updated.connect(_update_lobby_display)
-	print("✅ Lobby code:", network_manager.lobby_code)
-	
-	if !start_button:
-		print("❌ Error: Start_Button not found!")
-		return
-		
-	if !multiplayer.is_server():
-		start_button.hide()
-		var player_game = "Player" + str(randi() % 1000)
-		network_manager.join_lobby.rpc(player_game)
-	else:
-		start_button.show()
-	
-	network_manager.lobby_updated.connect(_update_lobby_display)
-	
-func _update_lobby_display():
-	print("DEBUG: player_list =", player_list)
-	if player_list != null:
-		player_list.clear()
-		for peer_id in network_manager.player_list:
-			var player_name = network_manager.player_list[peer_id]
-			player_list.add_item(str(peer_id) + " - " + player_name)
-	else:
-		print("ERROR: player_list is NULL!")
 
-	if multiplayer.is_server() and start_button:
-		start_button.disabled = !(network_manager.player_list.size() >= 2)
+	multiplayer.multiplayer_peer = peer
+	print("Server started on port 9999")
+	print("✅ Peer set: ", multiplayer.multiplayer_peer != null)
+	print("✅ Unique ID: ", multiplayer.get_unique_id())
+	print("✅ Is server: ", multiplayer.is_server())
+	
+	MultiplayerManager.players[1] = "Player 1"
+	MultiplayerManager.lobby_updated.emit()
+	
+func on_player_connected(player_id):  
+	if not get_tree():
+		print("Error: get_tree() is NULL!")
+		return
+	print("Player", player_id, "has connected!")
+	
+	if multiplayer.is_server():
+		if multiplayer.get_unique_id() == player_id:
+			MultiplayerManager.players[player_id] = "Player 1"
+		else:
+			var player_number = MultiplayerManager.players.size() + 1
+			MultiplayerManager.players[player_id] = "Player " + str(player_number)
+			
+		MultiplayerManager.lobby_updated.emit()  # 
+		print("Updated player list:", MultiplayerManager.players)
 		
-	print("✅ Updated lobby display:", network_manager.player_list)
+	if get_tree().get_multiplayer().is_server():
+		var player_number = MultiplayerManager.players.size() + 1
+		MultiplayerManager.players[player_id] = "Player " + str(player_number)
+		
+		MultiplayerManager.lobby_updated.emit() 
+	
+	
+@rpc("reliable", "call_local")  
+func set_lobby_code(code: String):
+	room_code = code
+	room_code_label.text = "" + room_code
+	
+	
+func create_lobby():
+	if multiplayer.is_server():
+		room_code = generate_room_code() 
+		set_lobby_code.rpc(room_code)
+	else:
+		print("Waiting for host to provide the room code...")
+	
+	
+func generate_room_code():
+	var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	var code = ""
+	for i in range(6):
+		code += chars[randi() % chars.length()]
+	
+	print("Generated Room Code:", code)  # Debugging output
+	return code
+	
+	
+@rpc("reliable", "authority")
+func sync_player_list(new_players):
+	MultiplayerManager.players = new_players
+	update_lobby()
+	
+	
+func update_lobby():
+	player_list.text = ""
+	print("Players in lobby:", MultiplayerManager.players)
+	
+	if multiplayer.is_server():
+		sync_player_list.rpc(MultiplayerManager.players)
+		
+	for id in MultiplayerManager.players.keys():
+		player_list.text += MultiplayerManager.players[id] + "\n"
+	
+	start_button.visible = multiplayer.is_server() and MultiplayerManager.players.size() >= 2
+	
+	if MultiplayerManager.players.is_empty():
+		print("MultiplayerManager.players is empty or not initialized!")
+		return  
+	
+	var sorted_players = MultiplayerManager.players.keys()
+	sorted_players.sort()
+	
+	player_list.text = "" 
+	for id in sorted_players:
+		player_list.text += MultiplayerManager.players[id] + "\n"
+	
+	start_button.visible = multiplayer.is_server() and MultiplayerManager.players.size() >= 2
+	
+	
+func _on_start_button_pressed() -> void:
+	if multiplayer.is_server():
+		if MultiplayerManager.players.size() >= 2:
+			print("Starting game...")
+			MultiplayerManager.start_game.rpc()
+		else:
+			print("Not enough players to start the game!")
+	else:
+		print("Error: Only host can start the game!")

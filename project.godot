@@ -17,9 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-NetworkManager="*res://NetworkManager.gd"
-Lobby="*res://lobby.gd"
 AudioManager="*res://audio_manager.gd"
+MultiplayerManager="*res://MultiplayerManager.gd"
 
 [display]
 
