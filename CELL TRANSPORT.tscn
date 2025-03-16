@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://lxhytj1cgsgx"]
+[gd_scene load_steps=8 format=3 uid="uid://lxhytj1cgsgx"]
 
 [ext_resource type="Texture2D" uid="uid://8tb2oswm01vm" path="res://landscape (3).png" id="1_dht6c"]
 [ext_resource type="Texture2D" uid="uid://c412nnx7lxiod" path="res://landscape (16 x 11.249 in) (1).png" id="2_amvlp"]
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_gi4lh"]
 [ext_resource type="Texture2D" uid="uid://clqt63u2qrwqs" path="res://PICTURES/BACKGROUNDS/landscape (14) (4).png" id="3_c70kr"]
 [ext_resource type="Script" path="res://celltransport.gd" id="5_n162o"]
+[ext_resource type="Texture2D" uid="uid://c7wlttyesubub" path="res://PICTURES/CHROMOSOMAL DISORDERS/115.png" id="6_oh2y0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oe12c"]
 size = Vector2(790.5, 458)
@@ -68,5 +69,13 @@ script = ExtResource("5_n162o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(576.75, 371)
 shape = SubResource("RectangleShape2D_oe12c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 119.0
+offset_top = 209.0
+offset_right = 332.0
+offset_bottom = 452.0
+texture = ExtResource("6_oh2y0")
+expand_mode = 1
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]
