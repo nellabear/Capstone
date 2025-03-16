@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=9 format=4 uid="uid://dkib15q1kbbj3"]
 
-[ext_resource type="Texture2D" uid="uid://chb6yt6trccaj" path="res://PICTURES/10.png" id="1_s87c6"]
+[ext_resource type="Texture2D" uid="uid://b8sv58pjqxs2i" path="res://PICTURES/BACKGROUNDS/landscape (2500 x 1080 px) (2500 x 600 px) (7).png" id="1_se02j"]
 
 [sub_resource type="Image" id="Image_n8ih0"]
 data = {
@@ -1345,7 +1345,7 @@ cache/0/14/0/glyphs/60/texture_idx = 0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmt35"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1aw7e"]
-texture = ExtResource("1_s87c6")
+texture = ExtResource("1_se02j")
 region_rect = Rect2(188.702, 78.2725, 2183.56, 448.105)
 
 [resource]
@@ -1372,4 +1372,4 @@ Button/styles/disabled = SubResource("StyleBoxEmpty_vmt35")
 Button/styles/focus = SubResource("StyleBoxEmpty_vmt35")
 Button/styles/hover = SubResource("StyleBoxTexture_1aw7e")
 Button/styles/normal = SubResource("StyleBoxTexture_1aw7e")
-Button/styles/pressed = SubResource("StyleBoxEmpty_vmt35")
+Button/styles/pressed = SubResource("StyleBoxTexture_1aw7e")

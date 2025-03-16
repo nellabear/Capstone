@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://8y02i8165ltk"]
+[gd_scene load_steps=7 format=3 uid="uid://dcalw3q2kdibd"]
 
-[ext_resource type="Texture2D" uid="uid://8tb2oswm01vm" path="res://landscape (3).png" id="1_qa4rb"]
-[ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_j4iyx"]
-[ext_resource type="Texture2D" uid="uid://c412nnx7lxiod" path="res://landscape (16 x 11.249 in) (1).png" id="2_yw8l7"]
-[ext_resource type="Texture2D" uid="uid://j36j42sdrgy7" path="res://TRUEORFALSE/UI/22.png" id="3_7jwu6"]
-[ext_resource type="Script" path="res://cellcycle.gd" id="5_hq7yx"]
+[ext_resource type="Texture2D" uid="uid://8tb2oswm01vm" path="res://landscape (3).png" id="1_uh6b1"]
+[ext_resource type="Texture2D" uid="uid://c412nnx7lxiod" path="res://landscape (16 x 11.249 in) (1).png" id="2_0xhyw"]
+[ext_resource type="Texture2D" uid="uid://401fm22phlt8" path="res://TRUEORFALSE/UI/20.png" id="3_r0fm6"]
+[ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="4_ux3gc"]
+[ext_resource type="Script" path="res://chromosomaldisorder.gd" id="5_1ce4x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eepp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpnme"]
 size = Vector2(790.5, 458)
 
 [node name="Node2D" type="Node2D"]
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_qa4rb")
+texture = ExtResource("1_uh6b1")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Control/Background"]
@@ -34,13 +34,13 @@ offset_top = 140.0
 offset_right = 973.0
 offset_bottom = 604.0
 
-[node name="cellcycle" type="Node2D" parent="Control/Background/Panel"]
+[node name="chromosomaldisorder" type="Node2D" parent="Control/Background/Panel"]
 
-[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/cellcycle"]
+[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/chromosomaldisorder"]
 offset_top = 2.0
 offset_right = 790.0
 offset_bottom = 459.0
-texture = ExtResource("2_yw8l7")
+texture = ExtResource("2_0xhyw")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
@@ -50,7 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_7jwu6")
+texture = ExtResource("3_r0fm6")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control/TextureRect"]
@@ -60,13 +60,13 @@ offset_left = 100.0
 offset_top = 26.0
 offset_right = 139.0
 offset_bottom = 77.0
-script = ExtResource("2_j4iyx")
+script = ExtResource("4_ux3gc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("5_hq7yx")
+script = ExtResource("5_1ce4x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(576.75, 371)
-shape = SubResource("RectangleShape2D_1eepp")
+shape = SubResource("RectangleShape2D_fpnme")
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]

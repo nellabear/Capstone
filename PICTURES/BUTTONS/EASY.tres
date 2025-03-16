@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=13 format=4 uid="uid://blcpyu6fbg63r"]
 
-[ext_resource type="Texture2D" uid="uid://6cgbsr5pdj7d" path="res://PICTURES/11.png" id="1_d1bvc"]
+[ext_resource type="Texture2D" uid="uid://k8ifbq05gbp1" path="res://PICTURES/BACKGROUNDS/14.png" id="1_7qmm8"]
 
 [sub_resource type="Image" id="Image_8felc"]
 data = {
@@ -1605,7 +1605,7 @@ cache/0/13/0/glyphs/45/texture_idx = 0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3x7s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2eco"]
-texture = ExtResource("1_d1bvc")
+texture = ExtResource("1_7qmm8")
 region_rect = Rect2(602, 402, 699.427, 200.7)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uiqpj"]

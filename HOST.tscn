@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bhgi6q8o0ngri"]
 
-[ext_resource type="Script" path="res://MultiplayerManager.gd" id="1_te8wt"]
+[ext_resource type="Script" path="res://GameMode.gd" id="1_yjaaw"]
 [ext_resource type="Texture2D" uid="uid://bslhy0h1o3obs" path="res://PICTURES/BACKGROUNDS/landscape (16).png" id="2_0uiau"]
 [ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="7_e00i5"]
 [ext_resource type="Texture2D" uid="uid://bdc831bvj0yo4" path="res://PICTURES/9.png" id="7_exepl"]
@@ -17,7 +17,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("1_te8wt")
+script = ExtResource("1_yjaaw")
 
 [node name="TextureRect" type="TextureRect" parent="GameMode"]
 layout_mode = 1
@@ -93,10 +93,10 @@ offset_bottom = 193.0
 
 [node name="StartButton" type="Button" parent="GameMode"]
 layout_mode = 0
-offset_left = 802.0
-offset_top = 573.0
-offset_right = 1111.0
-offset_bottom = 634.0
+offset_left = 873.0
+offset_top = 572.0
+offset_right = 1182.0
+offset_bottom = 633.0
 theme = ExtResource("7_ufubj")
 
 [node name="MasterMusic" type="AudioStreamPlayer" parent="."]

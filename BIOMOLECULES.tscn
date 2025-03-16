@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://TOPICSBACKBUTTON.gd" id="2_jpq8g"]
 [ext_resource type="Texture2D" uid="uid://bgpi64bafrxnc" path="res://PICTURES/1.png" id="2_y4vw5"]
 [ext_resource type="Texture2D" uid="uid://dfwtsdw362w23" path="res://TRUEORFALSE/UI/21.png" id="3_qrgmh"]
-[ext_resource type="Script" path="res://biomolecxcules.gd" id="5_s5f1q"]
+[ext_resource type="Script" path="res://biomolecules.gd" id="5_s5f1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi55e"]
 size = Vector2(829, 470)
@@ -35,10 +35,10 @@ offset_top = 142.0
 offset_right = 984.0
 offset_bottom = 614.0
 
-[node name="lavels" type="Node2D" parent="Control/Background/Panel"]
+[node name="biomolecules" type="Node2D" parent="Control/Background/Panel"]
 clip_children = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/lavels"]
+[node name="TextureRect" type="TextureRect" parent="Control/Background/Panel/biomolecules"]
 offset_right = 829.0
 offset_bottom = 472.0
 texture = ExtResource("2_y4vw5")
