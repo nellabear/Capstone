@@ -62,11 +62,22 @@ offset_right = 139.0
 offset_bottom = 77.0
 script = ExtResource("2_j4iyx")
 
+<<<<<<< HEAD
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("5_hq7yx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(571.5, 378)
 shape = SubResource("RectangleShape2D_vmqfi")
+=======
+[node name="Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 144.0
+offset_right = 213.0
+offset_bottom = 362.0
+text = "cell cycle
+"
+>>>>>>> 5b274db8db5b99bacf8091d9f0c734b473adda6b
 
 [connection signal="pressed" from="Control/TextureRect/Button" to="Control/TextureRect/Button" method="_on_pressed"]
