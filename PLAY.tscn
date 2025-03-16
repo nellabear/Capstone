@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bxgqtxj2namfr" path="res://ENTER NAME (2).png" id="1_bbn2c"]
 [ext_resource type="Texture2D" uid="uid://b36hya8kq4xos" path="res://14.png" id="2_b0cep"]
 [ext_resource type="Script" path="res://HOST.gd" id="3_2lv0w"]
-[ext_resource type="Texture2D" uid="uid://baum0r0svsydn" path="res://15.png" id="4_chlok"]
+[ext_resource type="Texture2D" uid="uid://rpid1e185dmq" path="res://15.png" id="4_chlok"]
 [ext_resource type="Script" path="res://MEMBER.gd" id="5_mx355"]
 [ext_resource type="AudioStream" uid="uid://c8f50gcpwed4p" path="res://AUDIO/Axie Infinity - Official  Lobby Background Music.mp3" id="8_2msqk"]
 [ext_resource type="Texture2D" uid="uid://jg5d8rah3xin" path="res://landscape (2500 x 1080 px) (2500 x 600 px) (3).png" id="8_im5k7"]
