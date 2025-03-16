@@ -7,10 +7,9 @@
 [ext_resource type="Script" path="res://LESSONS.gd" id="4_y60bn"]
 [ext_resource type="Script" path="res://cell_structure.gd" id="5_xjlrb"]
 [ext_resource type="Script" path="res://cell_cycle.gd" id="6_uawnc"]
+[ext_resource type="Script" path="res://biomolec_ules.gd" id="7_gmkk5"]
 [ext_resource type="Script" path="res://chromosomal_disorder.gd" id="8_3h1h7"]
 [ext_resource type="Script" path="res://cell_transport.gd" id="8_270jh"]
-
-[sub_resource type="GDScript" id="GDScript_apsfn"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -75,7 +74,7 @@ offset_left = 593.0
 offset_top = 414.0
 offset_right = 908.0
 offset_bottom = 468.0
-script = SubResource("GDScript_apsfn")
+script = ExtResource("7_gmkk5")
 
 [node name="CELL TRANSPORT" type="Button" parent="Control"]
 show_behind_parent = true
