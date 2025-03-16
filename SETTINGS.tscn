@@ -37,10 +37,10 @@ script = ExtResource("3_d4qyb")
 
 [node name="CheckBox" type="CheckBox" parent="Control"]
 layout_mode = 2
-offset_left = 603.0
-offset_top = 430.0
-offset_right = 627.0
-offset_bottom = 454.0
+offset_left = 586.0
+offset_top = 432.0
+offset_right = 610.0
+offset_bottom = 456.0
 
 [node name="VolumeSettings" type="VBoxContainer" parent="Control"]
 layout_mode = 1
