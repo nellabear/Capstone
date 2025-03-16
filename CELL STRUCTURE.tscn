@@ -51,16 +51,12 @@
 [ext_resource type="Texture2D" uid="uid://d30lu48u1krse" path="res://PICTURES/CELL THEORY/48.png" id="46_bdwhg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5mb4o"]
-load_path = "res://.godot/imported/16.png-78ad298efb1fe2e7a5c249743dd1e062.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hngn5"]
-load_path = "res://.godot/imported/17.png-4fb69cb5a757c8c0b083f79e7cdbcbf5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v3sjp"]
-load_path = "res://.godot/imported/18.png-e11f8a0a5b2d42b55681519a36a4133a.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_irujg"]
-load_path = "res://.godot/imported/19.png-3e8179691f8dcb8d08adb222a24beb98.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2ep4"]
 size = Vector2(790.5, 458)
